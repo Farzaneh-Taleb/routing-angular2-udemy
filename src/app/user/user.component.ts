@@ -19,7 +19,7 @@ id: string ;
     ) ;
   }
   onNavigate() {
- this.router.navigate(['/']);
+ this.router.navigate(['/'] , {queryParams: {'analytics' : 100 }});
   }
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

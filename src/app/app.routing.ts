@@ -1,9 +1,11 @@
 import {RouterModule, Routes} from '@angular/router';
 import {UserComponent} from "./user/user.component";
 import {HomeComponent} from "./home.component";
-const APP_ROUTES: Routes =[
+import {USER_ROUTES} from "./user/user.routes";
+const APP_ROUTES: Routes = [
   // {path: 'user' , component: UserComponent } ,
   {path: 'user/:id' , component: UserComponent } ,
+  {path: 'user/:id' , component: UserComponent, children: USER_ROUTES } ,
   {path: '' , component: HomeComponent }
 
 ];
